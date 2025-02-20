@@ -1,0 +1,19 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int stevan;
+    int erasmo;
+    int soma;
+    int multiplicacao;
+    stevan = 20;
+    erasmo = 10;
+    soma = stevan + erasmo;
+    multiplicacao = stevan * erasmo;
+    printf("o valor de erasmo é %d \n" , erasmo);
+    printf("o valor de stevan é %d \n" , stevan);
+    printf("a soma é %d \n", soma);
+     printf("a multiplicacao é %d", multiplicacao);
+
+    return 0;
+}
