@@ -1,0 +1,21 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int idade;
+    printf("digite sua idade:");
+scanf("%d" , &idade);
+if(idade>= 18){
+    printf("isso é uma festa se divirta");
+}else if(idade >= 12){
+    printf("\nva comer um hamburguer");
+}else{
+    printf("\nva tomar um cha de camomila!");
+}
+printf("\n a sua idade é %d" , idade);
+if(idade >= 65){
+    printf("\npasse na farmacia!");
+}
+printf("\n vá para casa dormi");
+    return 0;
+}
