@@ -1,0 +1,54 @@
+#include <stdio.h>
+int main() {
+    int veiculo;
+    int valor_pedagio;
+    int pagamento;
+    int troco; 
+    printf("\n\033[1mQual seu veiculo?\n");
+    printf("\033[7m------------------------\033[0m");
+    printf("\n\033[3m1 = Carro\t R$ 10\033[0m");
+    printf("\n\033[3m2 = Moto\t R$ 5 \033[0m");
+    printf("\n\033[3m3 = Caminhão\t R$ 20\033[0m");
+    printf("\n\033[3m4 = Ônibus\t R$ 30\033[0m\n");
+    printf("\033[7m------------------------\033[0m\n");
+    printf("\n\033[1mDigite: \033[0m");
+    scanf("%d", &veiculo);
+   
+    if( veiculo == 1 ){
+        printf("\n\033[1m valor para passar pelo pedágio com o seu \033[32mCarro é de 10 R$\033[0m");
+        valor_pedagio = 10;
+    }else if( veiculo == 2 ){
+        printf("\nO valor para passar pelo pedágio com sua \033[33mMoto é de 5 R$\033[0m");
+        valor_pedagio = 5;
+    }else if( veiculo == 3 ){
+        printf("\nO valor para passar pelo pedágio com seu \033[35mCaminhão é de 20 R$\033[0m");
+        valor_pedagio = 20;
+    }else if( veiculo == 4 ){
+        printf("\nO valor para passar pelo pedágio com seu \033[36mOnibus é de 30 R$\033[0m");
+        valor_pedagio = 30;
+    }else{
+        printf("\033[1;31mERRO, seu veículo não foi encontrado\033[0m\n");
+    }
+    printf("\nDigite o valor: ");
+    scanf("%d", &pagamento);
+   
+    if( pagamento == valor_pedagio ){
+        printf("\033[1;34mCerto, Boa viagem\033[0m");
+    }
+   
+    if( pagamento < valor_pedagio ){
+        printf("\n\033[1;31mEsta faltando dinheiro, digite novamente:\033[0m");
+        scanf("%d", &pagamento);
+    }  
+   
+    if( pagamento > valor_pedagio ){
+        troco = pagamento - valor_pedagio;
+        printf("O seu troco é %d", troco);
+        printf("\n\033[1;34mCerto, Boa viagem\033[0m");
+   
+    }
+   
+   
+   
+    return 0;
+}
